@@ -1,0 +1,26 @@
+version: "3.6"
+services:
+  yolov8:
+    image: yolov8:0.0.1
+    build:
+      context: .
+      dockerfile: ./dockerfiles/Dockerfile
+    ports:
+       - "8000:8000"
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - ./config:/usr/src/yolov8/config
+      - ./model:/usr/src/yolov8/model
+      - ./data:/usr/src/yolov8/data
+      - ./results:/usr/src/yolov8/results
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 1
+      # resources:
+      #   reservations:
+      #     devices:
+      #       - driver: nvidia
+      #         count: all
+      #         capabilities: [gpu]

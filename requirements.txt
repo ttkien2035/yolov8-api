@@ -1,0 +1,9 @@
+ultralytics
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+opencv-python
+watchdog
+pyarmor
+encryptoenv

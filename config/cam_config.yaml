@@ -1,0 +1,9 @@
+status:
+  '200': 'succed'
+  '460': 'detection error - canot find any object in frame'
+sources:
+  'camera1': 'data/cam1'
+  'camera2': 'data/cam2'
+  'camera3': 'data/cam1'
+  'camera4': 'data/cam2'
+  'camera5': 'data/cam1'
